@@ -1,9 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\images\aboutus.png" />
+    <Content Include="wwwroot\images\code-on-screen.png" />
+    <Content Include="wwwroot\images\CodeOnScreen.png" />
+    <Content Include="wwwroot\images\CollaborationIdea.jpeg" />
+    <Content Include="wwwroot\images\collaborationidea.png" />
+    <Content Include="wwwroot\images\collaborationidea_resized.jpg" />
+    <Content Include="wwwroot\images\competetivepricing.png" />
+    <Content Include="wwwroot\images\deadlines.png" />
+    <Content Include="wwwroot\images\Strategy.jpg" />
+    <Content Include="wwwroot\images\strategy.png" />
+    <Content Include="wwwroot\scss\customMain.scss" />
+    <Content Include="wwwroot\scss\test.scss" />
+    <Content Include="wwwroot\scss\_test.scss" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
@@ -14,6 +30,12 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+    <Folder Include="wwwroot\css\Custom\" />
+    <Folder Include="wwwroot\css\Custom\" />
+    <Folder Include="wwwroot\js\Custom\" />
   </ItemGroup>
 
 </Project>
