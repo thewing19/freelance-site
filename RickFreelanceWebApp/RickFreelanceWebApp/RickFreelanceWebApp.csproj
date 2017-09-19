@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="wwwroot\images\aboutus.png" />
     <Content Include="wwwroot\images\code-on-screen.png" />
     <Content Include="wwwroot\images\CodeOnScreen.png" />
@@ -32,7 +39,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder\" />
     <Folder Include="wwwroot\css\Custom\" />
     <Folder Include="wwwroot\css\Custom\" />
     <Folder Include="wwwroot\js\Custom\" />
