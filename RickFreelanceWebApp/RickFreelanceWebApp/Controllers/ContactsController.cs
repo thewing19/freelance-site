@@ -22,8 +22,7 @@ namespace RickFreelanceWebApp.Controllers
         // GET: Contacts
         public async Task<IActionResult> Index()
         {
-            var contacts = _context.Contacts.Include(c => c.Address);
-            return View(await contacts.ToListAsync());
+            return View(await _context.Contacts.ToListAsync());
         }
 
         // GET: Contacts/Details/5
@@ -55,7 +54,7 @@ namespace RickFreelanceWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ContactID,LastName,FirstName,Email")] Contact contact)
+        public async Task<IActionResult> Create([Bind("ContactID,LastName,FirstName,Email,Street,City,State,PostalCode")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +86,7 @@ namespace RickFreelanceWebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ContactID,LastName,FirstName,Email")] Contact contact)
+        public async Task<IActionResult> Edit(int id, [Bind("ContactID,LastName,FirstName,Email,Street,City,State,PostalCode")] Contact contact)
         {
             if (id != contact.ContactID)
             {

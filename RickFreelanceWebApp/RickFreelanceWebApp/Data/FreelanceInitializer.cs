@@ -18,27 +18,18 @@ namespace RickFreelanceWebApp.Data
                 return;
             }
 
-            var addresses = new Address[]
-            {
-                new Address
-                {
-                    City = "Hastings",
-                    State = "Michigan",
-                    Street = "420 West Center Street",
-                    PostalCode = "49058"
-                }
-            };
-
-            foreach (var address in addresses)
-            {
-                context.Addresses.Add(address);
-            }
-
-            context.SaveChanges();
-
             var contacts = new Contact[]
             {
-                new Contact {FirstName = "Rick", LastName = "Volosky", Email = "thewing19@yahoo.com", AddressID = 1}
+                new Contact
+                {
+                    FirstName = "Rick",
+                    LastName = "Volosky",
+                    Email = "thewing19@yahoo.com",
+                    Street = "420 West Center Street",
+                    City = "Hastings",
+                    State = "Michigan",
+                    PostalCode = "49058"
+                }
             };
 
             foreach (var contact in contacts)
@@ -48,7 +39,7 @@ namespace RickFreelanceWebApp.Data
 
             context.SaveChanges();
 
-            
+
         }
     }
 }
