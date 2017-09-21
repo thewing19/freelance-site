@@ -15,6 +15,7 @@ namespace RickFreelanceWebApp.Data
         }
 
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
