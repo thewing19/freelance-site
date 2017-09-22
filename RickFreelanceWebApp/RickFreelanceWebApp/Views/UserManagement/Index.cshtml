@@ -5,8 +5,23 @@
 }
 
 <h2>@ViewData["Title"].</h2>
-
-@foreach (var user in Model.Users)
-{
-    <p>@user.Email</p>
-}
+<p>
+    <a asp-action="Register" asp-controller="Account">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>
+                    @user.Email
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

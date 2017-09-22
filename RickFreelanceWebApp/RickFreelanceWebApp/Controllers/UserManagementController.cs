@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using RickFreelanceWebApp.Data;
 using RickFreelanceWebApp.Models;
 using RickFreelanceWebApp.Models.UserManagementViewModels;
 
@@ -16,10 +17,12 @@ namespace RickFreelanceWebApp.Controllers
     public class UserManagementController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly FreelanceContext _context;
 
-        public UserManagementController(UserManager<ApplicationUser> userManager)
+        public UserManagementController(UserManager<ApplicationUser> userManager, FreelanceContext context)
         {
             _userManager = userManager;
+            _context = context;
         }
 
         // GET: /<controller>/
