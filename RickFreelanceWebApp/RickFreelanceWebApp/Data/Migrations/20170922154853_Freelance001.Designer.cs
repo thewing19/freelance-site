@@ -8,8 +8,8 @@ using RickFreelanceWebApp.Data;
 namespace RickFreelanceWebApp.Data.Migrations
 {
     [DbContext(typeof(FreelanceContext))]
-    [Migration("20170922125118_FreelanceMigration001")]
-    partial class FreelanceMigration001
+    [Migration("20170922154853_Freelance001")]
+    partial class Freelance001
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -69,9 +69,6 @@ namespace RickFreelanceWebApp.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired();
-
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -110,8 +107,6 @@ namespace RickFreelanceWebApp.Data.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserClaim<string>", b =>
@@ -205,16 +200,6 @@ namespace RickFreelanceWebApp.Data.Migrations
                     b.HasKey("ContactID");
 
                     b.ToTable("Contact");
-                });
-
-            modelBuilder.Entity("RickFreelanceWebApp.Models.ApplicationUser", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUser");
-
-
-                    b.ToTable("ApplicationUser");
-
-                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
