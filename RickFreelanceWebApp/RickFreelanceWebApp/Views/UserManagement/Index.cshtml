@@ -1,0 +1,12 @@
+﻿@model RickFreelanceWebApp.Models.UserManagementViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Manage user accounts";
+}
+
+<h2>@ViewData["Title"].</h2>
+
+@foreach (var user in Model.Users)
+{
+    <p>@user.Email</p>
+}
