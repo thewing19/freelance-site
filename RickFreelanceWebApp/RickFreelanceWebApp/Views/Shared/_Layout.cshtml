@@ -36,10 +36,11 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Request Information</a></li>
                     @if (Context.User.Identity.IsAuthenticated)
                     {
-                        <li><a asp-area="" asp-controller="UserManagement" asp-action="Index">People</a></li>
+                        <li><a asp-area="" asp-controller="Contacts" asp-action="Index">Contacts</a></li>
+                        <li><a asp-area="" asp-controller="UserManagement" asp-action="Index">Users</a></li>
                     }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
