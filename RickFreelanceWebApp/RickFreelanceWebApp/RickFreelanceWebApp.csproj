@@ -41,9 +41,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\css\Custom\" />
-    <Folder Include="wwwroot\css\Custom\" />
-    <Folder Include="wwwroot\js\Custom\" />
+    <None Include="wwwroot\js\Custom\LightsOut\art.js" />
+    <None Include="wwwroot\js\Custom\LightsOut\board.js" />
+    <None Include="wwwroot\js\Custom\LightsOut\main.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\Shared\_ValidationScriptsPartial.cshtml">
