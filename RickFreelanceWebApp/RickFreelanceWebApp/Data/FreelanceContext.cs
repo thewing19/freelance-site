@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using RickFreelanceWebApp.Models;
+using RickFreelanceWebApp.Models.Blogs;
 
 namespace RickFreelanceWebApp.Data
 {
@@ -17,6 +18,7 @@ namespace RickFreelanceWebApp.Data
 
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<BlogPost> BlogPosts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

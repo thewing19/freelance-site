@@ -8,9 +8,10 @@ using RickFreelanceWebApp.Data;
 namespace RickFreelanceWebApp.Data.Migrations
 {
     [DbContext(typeof(FreelanceContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170925181325_AddBlogPosts-Migration")]
+    partial class AddBlogPostsMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.3")
